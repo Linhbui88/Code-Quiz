@@ -41,7 +41,7 @@ var questions = [
         title: "How do you declare a JavaScript variable?",
         choices: ["v carName","var carName","variable carName"],
         answer : "var carName"    
-    }]
+    }];
 
     btnStart.addEventListener('click', startQuiz);
     function startQuiz (){
@@ -83,7 +83,7 @@ function displayQuestion(question){
     titleitem.innerText=question.title
     question.choices.forEach(element => {
      var button =document.createElement("button")
-    button.className="btn-primary btn-block text-left"
+    button.className="btn-primary btn-block d-block text-left"
     button.innerText=element
     // questionanswers.innerHTML=""
     questionanswers.appendChild(button)
@@ -141,39 +141,9 @@ function correction(response){
 
 
  }
- //Scores Page
+ 
 
- var storedScores = JSON.parse(localStorage.getItem("userData"));
-var highScoresArea = document.querySelector("#highScoresList");
-var backBtn = document.querySelector("#backButton");
-var clearBtn = document.querySelector("#clearScores");
 
-function displayScores() {
-    if (storedScores !== null) {
-        var scoreList = document.createElement("ol");
-        scoreList.className = "scoreListClass";
-        for (var i = 0; i < storedScores.length; i++) {
-            var initials = storedScores[i].inits;
-            var scores = storedScores[i].userScore
-            var scoreEntry = document.createElement("li");
-            scoreEntry.innerHTML = initials + " - " + scores;
-            scoreList.appendChild(scoreEntry);
-        }
-        highScoresArea.appendChild(scoreList);
-    }
-};
-
-displayScores();
-
-backBtn.addEventListener("click", function () {
-    location.href = "";
-});
-
-clearBtn.addEventListener("click", function () {
-    highScoresArea.innerHTML = "";
-    window.localStorage.clear();
-
-});
 
 
 
