@@ -1,0 +1,21 @@
+body,html{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    height: 100%;
+}
+    
+    
+    h2 {
+    text-align: center;
+}
+#code-title{
+    text-align: center;
+    font-weight: bold;
+}
+.answer-item{
+    background: rgb(223, 201, 7);
+    width: 90%;
+    display: inline-block;
+    border-radius:8px;
+    padding: 3px;
+}
